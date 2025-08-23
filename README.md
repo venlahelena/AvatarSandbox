@@ -30,14 +30,14 @@ This project serves as a sandbox to learn and explore PHP, backend logic, and fr
 ### Backend
 **PHP 8.1+** – core backend and frontend language  
 **CodeIgniter 4** – PHP framework for routing, controllers, models, and views  
-**MySQL / MariaDB** – database for user accounts, avatars, pets, and locations  
+**PostgreSQL 16.x** – recommended database for user accounts, avatars, pets, and locations  
 **Composer** – dependency management for PHP  
 
 ### Frontend
 **HTML5 / CSS3** – layout and styling (all handled in PHP views)
 
 ### Other / Tools
-**XAMPP / WAMP / MAMP** – local development environment with PHP, MySQL, and Apache  
+**XAMPP / WAMP / MAMP / PostgreSQL Installer** – local development environment with PHP, PostgreSQL, and Apache
 **Git** – version control  
 **GitHub** – remote repository / portfolio showcase  
 **AI API (optional, planned)** – for avatar chat interaction

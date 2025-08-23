@@ -1,27 +1,14 @@
 <?php
 namespace App\Controllers;
 use App\Models\UserModel;
-use CodeIgniter\Controller;
+use App\Controllers\BaseController;
 
-class UserController extends Controller
+class UserController extends BaseController
 {
-    public function register()
+    public function testDb()
     {
-        // Registration logic here
-    }
-
-    public function login()
-    {
-        // Login logic here
-    }
-
-    public function logout()
-    {
-        // Logout logic here
-    }
-
-    public function profile()
-    {
-        // Profile logic here
+        $userModel = new \App\Models\UserModel();
+        $users = $userModel->getAllUsers();
+        return view('dashboard', ['users' => $users]);
     }
 }

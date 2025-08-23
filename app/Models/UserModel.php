@@ -6,10 +6,15 @@ class UserModel extends Model
 {
     protected $table = 'users';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['username', 'email', 'password', 'avatar_data', 'created_at'];
+    protected $allowedFields = ['username', 'email', 'password', 'avatar_data'];
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
 
     // Add custom user-related methods here
+
+    public function getAllUsers()
+    {
+        return $this->findAll();
+    }
 }
