@@ -1,0 +1,22 @@
+.dashboard-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+    background: #F2D6B3;
+    color: #3E2723;
+    border: none;
+    box-shadow: 0 0 6px 1px #F2D6B3;
+    transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard-btn:hover {
+    background: #FFD580;
+    color: #A67C52;
+    box-shadow: 0 0 10px 2px #FFD580;
+}

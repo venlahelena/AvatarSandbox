@@ -11,5 +11,7 @@ $routes->get('testDb', 'UserController::testDb');
 
 $routes->get('login', 'AuthController::login');
 $routes->post('login', 'AuthController::loginPost');
+$routes->get('logout', 'AuthController::logout');
 
-$routes->get('dashboard', 'Home::index');
+$routes->get('/', 'Home::index');
+$routes->get('dashboard', 'Home::dashboard');
