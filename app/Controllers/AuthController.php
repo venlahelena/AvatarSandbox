@@ -73,4 +73,10 @@ class AuthController extends BaseController
             'success' => $success
         ]);
     }
+
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('/');
+    }
 }

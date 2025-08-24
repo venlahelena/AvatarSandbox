@@ -1,0 +1,62 @@
+@import url('/css/buttons.css');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.landing-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('/img/Background.png') center center/cover no-repeat;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.landing-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 24, 24, 0.55);
+    z-index: 2;
+}
+
+.landing-info-box {
+    position: relative;
+    z-index: 3;
+    background: #F2D6B3;
+    box-shadow: 0 4px 24px rgba(62, 39, 35, 0.12);
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    max-width: 400px;
+    width: 90vw;
+    text-align: center;
+    border-radius: 18px;
+}
+.landing-info-box h1 {
+    margin-bottom: 1rem;
+    color: #C97A5B;
+    font-size: 2.2rem;
+}
+.landing-info-box p {
+    color: #3E2723;
+    font-size: 1.08rem;
+    margin-bottom: 2rem;
+}
+.landing-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+@media (max-width: 600px) {
+    .landing-info-box {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+        font-size: 0.98rem;
+    }
+    .landing-info-box h1 {
+        font-size: 1.3rem;
+    }
+}
