@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="/css/profile-theme.css">
 <div class="center-wrapper">
     <div class="form-card">
-        <div style="display: flex; justify-content: flex-end; gap: 0.5rem; margin-bottom: 1rem;">
+    <div class="dashboard-topbar" style="margin-bottom: 1rem;">
             <a href="/dashboard" class="dashboard-btn" title="Dashboard" aria-label="Dashboard">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#7c4dff" stroke-width="2"><path d="M3 13l9-9 9 9"/><path d="M4 10v10a1 1 0 0 0 1 1h5v-6h4v6h5a1 1 0 0 0 1-1V10"/></svg>
             </a>

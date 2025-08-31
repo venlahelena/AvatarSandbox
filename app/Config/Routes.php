@@ -17,3 +17,5 @@ $routes->get('/', 'Home::index');
 $routes->get('dashboard', 'Home::dashboard');
 
 $routes->get('profile', 'ProfileController::index');
+$routes->get('avatar/edit', 'AvatarController::edit');
+$routes->post('avatar/update', 'AvatarController::update');

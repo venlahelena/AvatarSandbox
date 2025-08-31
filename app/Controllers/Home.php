@@ -19,6 +19,9 @@ class Home extends BaseController
         if (!session('user_id')) {
             return redirect()->to('/');
         }
-        return view('dashboard');
+        $userId = session('user_id');
+        $userModel = model('UserModel');
+        $user = $userModel->find($userId);
+        return view('dashboard', ['user' => $user]);
     }
 }
