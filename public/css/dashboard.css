@@ -1,3 +1,104 @@
+/* Center avatar SVG */
+.avatar-svg {
+    display: block;
+    margin: auto;
+}
+/* Prevent scrolling on dashboard */
+body, html {
+    overflow: hidden;
+    height: 100%;
+}
+/* Dashboard top bar */
+.dashboard-topbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 0.5rem;
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    width: auto;
+    z-index: 100;
+}
+
+/* Avatar preview position */
+.avatar-preview {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+    z-index: 10;
+}
+
+/* Customize button */
+.avatar-customize-btn {
+    position: fixed;
+    top: 40%;
+    right: 0;
+    z-index: 101;
+    background: #F2D6B3;
+    color: #3E2723;
+    border: none;
+    border-radius: 12px 0 0 12px;
+    width: 48px;
+    height: 120px;
+    box-shadow: 0 2px 8px #C97A5B44;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Customization panel */
+.avatar-customize-panel {
+    position: fixed;
+    top: 20%;
+    right: -320px;
+    width: 320px;
+    height: 60vh;
+    background: #FFF7ED;
+    box-shadow: -2px 0 12px #C97A5B33;
+    border-radius: 16px 0 0 16px;
+    z-index: 102;
+    transition: right 0.3s;
+    padding: 2rem 1.5rem;
+}
+.avatar-customize-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.avatar-customize-title {
+    color: #3E2723;
+    margin-top: 0;
+}
+.avatar-customize-close {
+    background: none;
+    border: none;
+    color: #A67C52;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.avatar-customize-label {
+    color: #3E2723;
+    font-weight: 600;
+}
+.avatar-customize-select {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.avatar-customize-color {
+    width: 60px;
+    height: 40px;
+    padding: 0;
+    border: none;
+}
+.avatar-customize-save {
+    width: 100%;
+    margin-top: 1rem;
+    background: #C97A5B;
+    border: none;
+}
 .dashboard-btn {
     position: relative;
     top: 2rem;
