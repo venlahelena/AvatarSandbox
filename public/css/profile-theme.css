@@ -1,0 +1,54 @@
+/* profile-theme.css */
+body {
+    background: #C97A5B;
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    color: #3E2723;
+}
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.form-card {
+    background: #F2D6B3;
+    padding: 3rem 5rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(62, 39, 35, 0.08);
+    max-width: 900px;
+    min-height: 650px;
+    width: 100%;
+}
+.profile-info p {
+    margin: 0.5rem 0;
+}
+.achievement-list {
+    list-style: none;
+    padding: 0;
+}
+.achievement-list li {
+    background: #f0e6ff;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+.date {
+    color: #888;
+    font-size: 0.9em;
+}
+.dashboard-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0.2rem;
+    border-radius: 50%;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+.dashboard-btn:hover {
+    box-shadow: 0 0 8px #7c4dff33;
+    background: #f3eaff;
+}

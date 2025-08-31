@@ -63,6 +63,12 @@ class AuthController extends BaseController
         $user = $authService->authenticate($email, $password);
 
         if ($user) {
+            session()->set('user_id', $user['id']);
+            // Award daily login XP
+            $xpService = new \App\Services\XPService();
+            $xpService->awardDailyLoginXP($user['id']);
+            // Award achievement for first login
+            $xpService->awardAchievement($user['id'], 'First Login', 'Logged in for the first time');
             return redirect()->to('/dashboard');
         } else {
             $error = 'Invalid email or password.';
