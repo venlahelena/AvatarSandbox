@@ -16,6 +16,18 @@
             <p><strong>Email:</strong> <?= esc($user['email']) ?></p>
             <p><strong>XP:</strong> <?= esc($user['xp']) ?></p>
         </div>
+
+        <!-- Pet Info Section -->
+        <div class="pet-section" style="margin:2rem 0;">
+            <h3>Your Pet</h3>
+            <?php echo view('pet/show', [
+                'userPet' => $userPet ?? null,
+                'pet' => $pet ?? null,
+                'showActions' => false,
+                'showName' => true
+            ]); ?>
+        </div>
+
         <h3>Achievements</h3>
         <ul class="achievement-list">
             <?php foreach ($achievements as $achievement): ?>

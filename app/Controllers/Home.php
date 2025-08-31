@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Libraries\PetService;
 
 class Home extends BaseController
 {
@@ -22,6 +23,16 @@ class Home extends BaseController
         $userId = session('user_id');
         $userModel = model('UserModel');
         $user = $userModel->find($userId);
-        return view('dashboard', ['user' => $user]);
+
+        // Fetch user's pet and pet type via PetService
+        $petData = PetService::getUserPetWithType($userId);
+        $petModel = model('PetModel');
+        $pets = $petModel->orderBy('unlock_level', 'ASC')->findAll();
+        return view('dashboard', [
+            'user' => $user,
+            'userPet' => $petData['userPet'],
+            'pet' => $petData['pet'],
+            'pets' => $pets
+        ]);
     }
 }

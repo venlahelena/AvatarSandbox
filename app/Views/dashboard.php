@@ -16,13 +16,49 @@
 </div>
 
 <!-- Avatar Rendered on Dashboard -->
-<div id="avatar-preview" class="avatar-preview">
+<div id="avatar-preview" class="avatar-preview"></div>
+
+<!-- Pet Display (below avatar) -->
+<div class="dashboard-pet-area">
+   <div class="dashboard-pet-container">
+	   <?php echo view('pet/show', [
+		   'userPet' => $userPet ?? null,
+		   'pet' => $pet ?? null,
+		   'showActions' => true,
+		   'showName' => false
+	   ]); ?>
+   </div>
 </div>
 
 <!-- Side rectangular button for avatar customization -->
 <button id="avatar-customize-btn" class="avatar-customize-btn">
 	<span style="writing-mode: vertical-rl; text-orientation: mixed; font-weight: bold; font-size: 1.1rem; letter-spacing: 0.1em;">Customize</span>
 </button>
+
+<!-- Side rectangular button for pet selection -->
+<button id="pet-select-btn" class="avatar-customize-btn" style="top:55%;right:0;background:#FFD580;color:#3E2723;">
+	<span style="writing-mode: vertical-rl; text-orientation: mixed; font-weight: bold; font-size: 1.1rem; letter-spacing: 0.1em;">Choose Pet</span>
+</button>
+
+<!-- Pet selection panel (hidden by default, slides out when button pressed) -->
+<div id="pet-select-panel" class="avatar-customize-panel" style="right:-320px;">
+	<div class="avatar-customize-header">
+		<h3 class="avatar-customize-title">Pet Selection</h3>
+		<button id="pet-select-close" class="avatar-customize-close">&times;</button>
+	</div>
+	<form id="pet-select-form" method="post" action="/pet/select/choose" style="margin-top:2rem;">
+		<label for="pet-select-dropdown" style="font-weight:600;margin-bottom:1rem;">Choose a pet:</label>
+		<select id="pet-select-dropdown" name="pet_id" style="width:220px;padding:0.6rem 1rem;border-radius:8px;font-size:1.1rem;">
+			<?php foreach ($pets as $pet): ?>
+				<option value="<?= esc($pet['id']) ?>" data-type="<?= esc($pet['type']) ?>">
+					<?= esc($pet['type']) ?>
+				</option>
+			<?php endforeach; ?>
+		</select>
+		<div id="pet-preview-area" style="margin-top:2rem;"></div>
+		<button type="submit" class="btn btn-primary" style="margin-top:2rem;">Select Pet</button>
+	</form>
+</div>
 
 <!-- Customization panel (hidden by default, slides out when button pressed) -->
 <div id="avatar-customize-panel" class="avatar-customize-panel">
@@ -73,4 +109,7 @@ window.avatarInitialData = {
 };
 </script>
 <script src="/js/avatar-customize.js"></script>
+<script src="/js/dashboard-pet-feedback.js"></script>
+<script src="/js/dashboard-pet-select.js"></script>
+</script>
 <?= $this->endSection() ?>

@@ -1,3 +1,52 @@
+/* Pet area bottom right */
+.dashboard-pet-area {
+    position: absolute;
+    left: 75%;
+    top: 85%;
+    transform: translate(-50%, 0);
+    z-index: 9999;
+    pointer-events: auto;
+}
+.dashboard-pet-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dashboard-pet-image {
+    border-radius: 50%;
+    box-shadow: 0 2px 8px #C97A5B44;
+    background: #FFF7ED;
+}
+.dashboard-pet-buttons {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+.dashboard-pet-container:hover .dashboard-pet-buttons {
+    opacity: 1;
+    pointer-events: auto;
+}
+.dashboard-pet-buttons button {
+    background: #F2D6B3;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 1px 4px #C97A5B33;
+    transition: background 0.2s;
+}
+.dashboard-pet-buttons button:hover {
+    background: #FFD580;
+}
 /* Center avatar SVG */
 .avatar-svg {
     display: block;
