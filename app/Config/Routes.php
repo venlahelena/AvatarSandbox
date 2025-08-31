@@ -15,3 +15,5 @@ $routes->get('logout', 'AuthController::logout');
 
 $routes->get('/', 'Home::index');
 $routes->get('dashboard', 'Home::dashboard');
+
+$routes->get('profile', 'ProfileController::index');
