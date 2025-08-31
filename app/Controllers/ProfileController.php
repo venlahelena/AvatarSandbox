@@ -3,6 +3,7 @@ namespace App\Controllers;
 use App\Models\UserModel;
 use App\Models\AchievementModel;
 use App\Controllers\BaseController;
+use App\Libraries\PetService;
 
 class ProfileController extends BaseController
 {
@@ -16,9 +17,12 @@ class ProfileController extends BaseController
         $achievementModel = new AchievementModel();
         $user = $userModel->find($userId);
         $achievements = $achievementModel->where('user_id', $userId)->findAll();
+        $petData = PetService::getUserPetWithType($userId);
         return view('user/profile', [
             'user' => $user,
-            'achievements' => $achievements
+            'achievements' => $achievements,
+            'userPet' => $petData['userPet'],
+            'pet' => $petData['pet']
         ]);
     }
 }

@@ -19,3 +19,8 @@ $routes->get('dashboard', 'Home::dashboard');
 $routes->get('profile', 'ProfileController::index');
 $routes->get('avatar/edit', 'AvatarController::edit');
 $routes->post('avatar/update', 'AvatarController::update');
+
+$routes->post('pet/rename', 'PetController::rename');
+$routes->post('pet/interact/(:segment)', 'PetController::interact/$1');
+$routes->get('pet/select', 'PetSelectController::index');
+$routes->post('pet/select/choose', 'PetSelectController::choose');
